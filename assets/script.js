@@ -8,10 +8,6 @@ hogman = {
     hp: 115
 }
 
-const displayChar = function () {
-    //$("#textDiv").empty().append("You chose a character!");
-};
-
 $("#charBtn").on("click", function () {
     event.preventDefault();
     function displayRadioValue() {
@@ -25,6 +21,24 @@ $("#charBtn").on("click", function () {
     }
     displayRadioValue();
     $("#choiceDiv").empty();
-    console.log(this.value)
-    //displayChar();
+    const text1 = function() {
+        document.getElementById("textDiv").innerHTML = "Your character pins the opponent!"
+    };
+    const text2 = function() {
+        document.getElementById("textDiv").innerHTML = "<h3>3!</h3>"
+    };
+    const text3 = function() {
+        document.getElementById("textDiv").innerHTML = "<h2>2!</h2>"
+    };
+    const text4 = function() {
+        document.getElementById("textDiv").innerHTML = "<h1>1!</h1>"
+    };
+    const text5 = function() {
+        document.getElementById("textDiv").innerHTML = "Your character wins the match! The crowd goes wild!"
+    };
+    setTimeout(text1, 3000);
+    setTimeout(text2, 6000);
+    setTimeout(text3, 7500);
+    setTimeout(text4, 9000);
+    setTimeout(text5, 12000);
 });
