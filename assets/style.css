@@ -3,3 +3,7 @@ body {
     background-image: url("./paperbg.jpg");
     padding-left: 125px;
 }
+
+img {
+    max-height: 300px;
+}
